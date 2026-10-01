@@ -14,8 +14,8 @@ export default function Jodi() {
       </Parallax>
 
       <Reveal y={12}>
-        <p className="font-display text-[11px] tracking-[0.35em] text-gold-500 uppercase">Hamari Jodi</p>
-        <p className="mt-2 font-yatra text-xl text-blush-400">दू मन, एक जिनगी</p>
+        <p className="font-display text-[11px] tracking-[0.35em] text-gold-500 uppercase">Made for Each Other</p>
+        <p className="mt-2 font-script text-3xl text-blush-400">Two hearts, one life</p>
       </Reveal>
 
       <InView as="div"

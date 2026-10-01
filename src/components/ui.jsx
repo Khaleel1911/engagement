@@ -229,17 +229,12 @@ function SplitTitle({ text, className }) {
   )
 }
 
-export function SectionTitle({ kicker, title, hindi, dark = false }) {
+export function SectionTitle({ kicker, title, dark = false }) {
   return (
     <div className="mb-10 text-center">
       {kicker && (
         <Reveal y={12}>
           <p className={`font-display text-[11px] tracking-[0.35em] uppercase ${dark ? 'text-gold-300' : 'text-gold-500'}`}>{kicker}</p>
-        </Reveal>
-      )}
-      {hindi && (
-        <Reveal y={12} delay={0.05}>
-          <p className={`mt-3 font-yatra text-lg ${dark ? 'text-blush-200' : 'text-blush-400'}`}>{hindi}</p>
         </Reveal>
       )}
       <SplitTitle text={title} className={`mt-1 font-display text-[1.9rem] leading-tight font-semibold sm:text-4xl ${dark ? 'text-foil' : 'text-cocoa-800'}`} />

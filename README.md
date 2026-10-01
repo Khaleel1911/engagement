@@ -1,6 +1,6 @@
 # Rahul's Sagai: Invitation Website
 
-A mobile-first Chhattisgarhi-style engagement invitation ("Blush Lotus" theme) built with React, Tailwind 4,
+A mobile-first Gujarati-style engagement invitation ("Blush Lotus" theme) built with React, Tailwind 4,
 Motion (Framer Motion), Lenis smooth scroll and canvas-confetti.
 
 ## Run

@@ -112,13 +112,13 @@ export function Toran({ count = 11, className = '' }) {
   )
 }
 
-/* ─────────────────────────  Godna band (Chhattisgarhi tattoo motifs)  ───────────────────────── */
-export function GodnaBand({ className = '', color = '#d4a568' }) {
+/* ─────────────────────────  Bandhani band (Gujarati tie-dye dot motifs)  ───────────────────────── */
+export function BandhaniBand({ className = '', color = '#d4a568' }) {
   const id = useId().replace(/:/g, '')
   return (
     <svg className={`h-5 w-full ${className}`} aria-hidden="true">
       <defs>
-        <pattern id={`godna-${id}`} width="40" height="20" patternUnits="userSpaceOnUse">
+        <pattern id={`bandhani-${id}`} width="40" height="20" patternUnits="userSpaceOnUse">
           <g fill={color}>
             <path d="M0 10 L6 4 L12 10 L6 16Z" />
             <circle cx="20" cy="10" r="1.6" />
@@ -131,7 +131,7 @@ export function GodnaBand({ className = '', color = '#d4a568' }) {
           <path d="M0 1 H40 M0 19 H40" stroke={color} strokeWidth="1" />
         </pattern>
       </defs>
-      <rect width="100%" height="20" fill={`url(#godna-${id})`} />
+      <rect width="100%" height="20" fill={`url(#bandhani-${id})`} />
     </svg>
   )
 }

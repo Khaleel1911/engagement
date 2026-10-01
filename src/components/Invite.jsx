@@ -1,5 +1,5 @@
 import { Reveal, Parallax } from './ui'
-import { Corner, Divider, EventIcon, Lotus, Sprig } from './Ornaments'
+import { Corner, Divider, Lotus, Sprig } from './Ornaments'
 import { config } from '../config'
 
 export default function Invite() {
@@ -18,29 +18,21 @@ export default function Invite() {
           <Corner className="absolute bottom-2 left-2 w-12 -scale-y-100" />
           <Corner className="absolute right-2 bottom-2 w-12 -scale-100" />
 
-          <EventIcon name="kalash" className="mx-auto w-12 text-gold-400" />
-          <p className="mt-4 font-yatra text-2xl text-blush-400">जय जोहार</p>
-          <p className="mt-1 font-display text-[10px] tracking-[0.35em] text-gold-500 uppercase">सादर नेवता · A Warm Invitation</p>
+          <img src={config.images.kalash} alt="Kalash" className="mx-auto w-28 mix-blend-multiply" />
+          <p className="mt-4 font-script text-4xl text-blush-400">With Love &amp; Blessings</p>
+          <p className="mt-1 font-display text-[10px] tracking-[0.35em] text-gold-500 uppercase">A Warm Invitation</p>
+
 
           <Divider className="my-6" />
 
-          {/* Chhattisgarhi invitation */}
-          <p className="font-deva text-[16px] leading-[1.9] text-cocoa-800">
-            मंगलमय बेरा म, गणपति बप्पा के आसीरवाद अउ सियान मन के मया ले, हमर घर म खुसी के सुघ्घर अवसर आए हे।
-            <br />
-            <span className="font-semibold text-blush-500">{config.groom.name}</span> अउ <span className="font-semibold text-blush-500">{config.bride.name}</span> के सगाई म आप मन ल सपरिवार सादर नेवता हे।
-          </p>
-
-          <Divider className="my-6" />
-
-          <p className="font-serif text-lg leading-relaxed text-cocoa-700 italic">
+          <p className="mb-5 font-serif text-lg leading-relaxed text-cocoa-700 italic">
             With the divine blessings of Lord Ganesha and the love of our elders, we joyfully invite you and your family to grace the Sagai ceremony of
           </p>
-          <p className="mt-5 font-script text-[2.6rem] leading-tight text-rose">{config.groom.fullName}</p>
+          <p className="font-script text-[2.6rem] leading-tight text-rose">{config.groom.fullName}</p>
           <p className="font-display text-sm text-gold-500">&amp;</p>
           <p className="font-script text-[2.6rem] leading-tight text-rose">{config.bride.fullName}</p>
           <p className="mt-6 font-serif text-base text-cocoa-700">Your presence and blessings will make this auspicious moment complete.</p>
-          <p className="mt-6 font-deva text-sm text-gold-500">आप मन के अगोरा म · {config.hostFamily}</p>
+          <p className="mt-6 font-display text-[11px] tracking-[0.25em] text-gold-500 uppercase">Awaiting your presence · {config.hostFamily}</p>
         </Reveal>
     </div>
   )

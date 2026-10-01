@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { SectionTitle, Reveal, Parallax } from './ui'
-import { Diya, GodnaBand, Mandala } from './Ornaments'
+import { Diya, BandhaniBand, Mandala } from './Ornaments'
 import { config } from '../config'
 
 function diff(target) {
@@ -44,13 +44,13 @@ export default function Countdown() {
 
   return (
     <div className="bg-champagne relative flex flex-col justify-center px-5 pt-20 pb-20">
-      <GodnaBand className="absolute top-0 left-0" />
+      <BandhaniBand className="absolute top-0 left-0" />
       <Parallax speed={-0.4} className="pointer-events-none absolute top-1/2 left-1/2 -mt-[180px] -ml-[180px] h-[360px] w-[360px]">
         <Mandala className="spin-slow h-full w-full opacity-30" />
       </Parallax>
 
       <div className="relative">
-        <SectionTitle kicker="The auspicious muhurat" hindi="शुभ घड़ी के अगोरा" title="Counting Every Moment" />
+        <SectionTitle kicker="The auspicious muhurat" title="Counting Every Moment" />
 
         {t.done ? (
           <Reveal className="text-center font-script text-5xl text-rose">The day is here!</Reveal>

@@ -11,80 +11,78 @@ import groomPhoto from './assets/groom.webp'
 import bridePhoto from './assets/bride.webp'
 import couple1 from './assets/couple1.webp'
 import couple2 from './assets/couple2.webp'
+import kalash from './assets/kalash.webp'
+import monogram from './assets/monogram.webp'
 
 export const config = {
   groom: {
     name: 'Rahul',
     fullName: 'Rahul Chauhan',
-    parents: 'Shri [Father’s Name] & Smt. [Mother’s Name]',
-    relation: 'सुपुत्र', // son of
+    parents: 'Shri Vijay Singh Chauhan & Smt. Kusum Chauhan',
+    relation: 'Son of',
     photo: groomPhoto,
     photoPosition: '50% 8%', // which part of the photo to keep in the arch
-    about: 'Calm, curious and endlessly kind. Believes every good day starts with chai and ends with family.',
+    about: 'Calm, curious and endlessly kind. Believes every good day starts with coffee and ends with family.',
   },
   bride: {
     name: 'Neha',
-    fullName: 'Neha [Surname]',
-    parents: 'Shri [Father’s Name] & Smt. [Mother’s Name]',
-    relation: 'सुपुत्री', // daughter of
+    fullName: 'Neha Chauhan',
+    parents: 'Shri Yogendra Chauhan & Smt. Sunita Chauhan',
+    relation: 'Daughter of',
     photo: bridePhoto,
     photoPosition: '50% 20%',
     about: 'Warm laughter, a heart full of music, and a smile that makes every room feel like home.',
   },
 
   // Main ceremony date/time, used by the countdown (local time, 24h)
-  mainDate: '2026-12-12T11:00:00',
-  displayDate: 'Saturday, 12th December 2026',
-  displayDateHindi: 'शनिवार, 12 दिसंबर 2026',
+  mainDate: '2026-12-07T11:00:00',
+  displayDate: 'Monday, 7th December 2026',
 
   hostFamily: 'The Chauhan Family',
-  city: '[City], Chhattisgarh',
+  city: 'Bharuch, Gujarat',
 
-  images: { logo, rings, ganesh, couple1, couple2 },
+  images: { logo, monogram, rings, ganesh, kalash, couple1, couple2 },
   music: '/music/shehnai.mp3', // optional background music
 
   events: [
     {
-      id: 'tilak',
-      title: 'Tilak & Phaldan',
-      hindi: 'तिलक एवं फलदान',
-      date: '2026-12-12',
+      id: 'goldhana',
+      title: 'Chandlo & Gol Dhana',
+      date: '2026-12-07',
       start: '10:00',
       end: '11:00',
       icon: 'kalash',
       description:
-        'The families meet with coconut, fruits, sweets and blessings. A tilak of kumkum marks the beginning of a sacred bond.',
-      venue: '[Venue Name]',
-      address: '[Full Address], [City], Chhattisgarh',
-      mapQuery: 'Raipur Chhattisgarh',
+        'The families meet over gol dhana, sweets and blessings. A chandlo of kumkum marks the beginning of a sacred bond.',
+      venue: 'Hotel Unity',
+      address: 'NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi, Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015',
+      mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015',
     },
     {
       id: 'sagai',
       title: 'Sagai: Ring Ceremony',
-      hindi: 'सगाई · अंगूठी रस्म',
-      date: '2026-12-12',
+      date: '2026-12-07',
       start: '11:00',
       end: '13:00',
       icon: 'rings',
       description:
         'Before Ganesh ji and our elders, two hearts exchange rings and promises. The heart of the celebration.',
-      venue: '[Venue Name]',
-      address: '[Full Address], [City], Chhattisgarh',
-      mapQuery: 'Raipur Chhattisgarh',
+      venue: 'Hotel Unity',
+      address: 'NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi, Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015',
+      mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015',
     },
     {
       id: 'bhoj',
-      title: 'Preetibhoj & Sangeet',
-      hindi: 'प्रीतिभोज एवं संगीत',
-      date: '2026-12-12',
+      title: 'Bhojan & Raas Garba',
+      date: '2026-12-07',
       start: '19:00',
       end: '23:00',
       icon: 'diya',
       description:
-        'An evening of Chhattisgarhi flavours, folk songs, dhol and dance. Come hungry, leave dancing.',
-      venue: '[Venue Name]',
-      address: '[Full Address], [City], Chhattisgarh',
-      mapQuery: 'Raipur Chhattisgarh',
+        'An evening of a grand Gujarati thali, dhol, dandiya raas and garba. Come hungry, leave dancing.',
+      venue: 'Hotel Unity',
+      address: 'NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi, Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015',
+      mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015',
     },
   ],
 
@@ -120,19 +118,19 @@ export const config = {
   ],
 
   venue: {
-    name: '[Venue Name]',
-    address: '[Full Address], [City], Chhattisgarh – [PIN]',
-    mapQuery: 'Raipur Chhattisgarh', // what Google Maps should search for
-    notes: 'Ample parking available. The venue is 15 minutes from [Railway Station / Airport].',
+    name: 'Hotel Unity',
+    address: 'NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi, Meghdoot Twp, Zadeshwar, Bharuch, Gujarat – 392015',
+    mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015', // what Google Maps should search for
+    notes: 'Ample parking available. On NH 48 at Zadeshwar Chowkdi, right beside the Swaminarayan Temple.',
     // Labels on the illustrated map (swap for real nearby places)
-    mapLabels: { start: 'City Centre', landmark: 'Mandir', pond: 'Talab', river: 'Nadi', station: 'Station' },
+    mapLabels: { start: 'City Centre', landmark: 'Mandir', pond: 'Talav', river: 'Narmada', station: 'Station' },
   },
 
   // Shown in the footer ("For any queries")
   rsvp: {
     contacts: [
-      { name: '[Contact Name]', phone: '+91 XXXXX XXXXX' },
-      { name: '[Contact Name]', phone: '+91 XXXXX XXXXX' },
+      { name: 'Rahul', phone: '+91 87329 66848' },
+      { name: 'Neha', phone: '+91 78749 50775' },
     ],
   },
 

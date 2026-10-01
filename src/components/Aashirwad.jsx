@@ -41,7 +41,7 @@ export default function Aashirwad() {
       </Parallax>
 
       <div className="relative">
-        <SectionTitle dark kicker="An interactive blessing" hindi="दीया जलावव" title="Light Seven Diyas" />
+        <SectionTitle dark kicker="An interactive blessing" title="Light Seven Diyas" />
         <p className="mx-auto -mt-4 max-w-xs font-serif text-lg text-gold-100/80 italic">
           One for each promise. Tap them one by one to send your blessing to the couple.
         </p>
@@ -66,8 +66,8 @@ export default function Aashirwad() {
         <AnimatePresence>
           {done && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-10">
-              <p className="font-script text-5xl text-foil">Shubh Aashirwad</p>
-              <p className="mt-2 font-deva text-lg text-blush-200">सदा खुस रहव, सदा संग रहव</p>
+              <p className="font-script text-5xl text-foil">Blessings Showered</p>
+              <p className="mt-2 font-serif text-lg text-blush-200 italic">May you always be happy, always together.</p>
               <button onClick={() => setLit(0)} className="mt-5 font-display text-[10px] tracking-[0.3em] text-gold-300 uppercase underline underline-offset-4">
                 Light again
               </button>

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { SectionTitle, Reveal, Parallax } from './ui'
-import { EventIcon, Corner, GodnaBand, Mandala } from './Ornaments'
+import { EventIcon, Corner, BandhaniBand, Mandala } from './Ornaments'
 import { config } from '../config'
 
 const fmtTime = (t) => {
@@ -28,7 +28,7 @@ export const mapsLink = (q) => `https://www.google.com/maps/search/?api=1&query=
 export default function Events() {
   return (
     <div className="bg-champagne relative px-5 pt-20 pb-24">
-      <GodnaBand className="absolute top-0 left-0" />
+      <BandhaniBand className="absolute top-0 left-0" />
       <Parallax speed={-0.5} className="pointer-events-none absolute top-40 -right-40 h-80 w-80">
         <Mandala className="spin-slow h-full w-full opacity-25" />
       </Parallax>
@@ -36,7 +36,7 @@ export default function Events() {
         <Mandala className="spin-slower h-full w-full opacity-25" stroke="#d67564" />
       </Parallax>
 
-      <SectionTitle kicker="Rituals & celebrations" hindi="कार्यक्रम" title="The Ceremonies" />
+      <SectionTitle kicker="Rituals & celebrations" title="The Ceremonies" />
 
       <div className="relative mx-auto grid max-w-5xl gap-10 md:grid-cols-3">
         {config.events.map((e, i) => (
@@ -52,8 +52,7 @@ export default function Events() {
                 <div className="relative mx-auto grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-blush-100 to-blush-300 text-blush-600 ring-1 ring-gold-300">
                   <EventIcon name={e.icon} className="w-12" />
                 </div>
-                <p className="relative mt-5 font-yatra text-lg text-blush-400">{e.hindi}</p>
-                <h3 className="relative font-display text-2xl font-semibold text-cocoa-800">{e.title}</h3>
+                <h3 className="relative mt-5 font-display text-2xl font-semibold text-cocoa-800">{e.title}</h3>
 
                 <div className="relative mt-4 inline-flex flex-col gap-0.5 rounded-full bg-blush-50 px-5 py-2 ring-1 ring-blush-200">
                   <span className="font-display text-xs tracking-widest text-cocoa-800">{fmtDate(e.date)}</span>

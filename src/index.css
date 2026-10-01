@@ -36,8 +36,6 @@
   --font-display: 'Cinzel', serif;
   --font-serif: 'Cormorant Garamond', serif;
   --font-script: 'Great Vibes', cursive;
-  --font-deva: 'Tiro Devanagari Hindi', serif;
-  --font-yatra: 'Yatra One', 'Tiro Devanagari Hindi', serif;
 }
 
 html,
@@ -80,6 +78,13 @@ body.locked {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+/* background-clip:text only paints inside the box, so script swashes that rise
+   above the line got cut off. Pad the paint area and cancel it with margin. */
+.text-foil,
+.text-rose {
+  padding: 0.25em 0.15em;
+  margin: -0.25em -0.15em;
 }
 /* Coral → gold, like the "N" and "&" in the logo */
 .text-rose {

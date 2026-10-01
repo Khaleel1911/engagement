@@ -17,7 +17,7 @@ export default function Gallery() {
         <Sprig className="w-full" />
       </Parallax>
       <div className="px-5">
-        <SectionTitle kicker="Captured with love" hindi="यादें" title="Moments" />
+        <SectionTitle kicker="Captured with love" title="Moments" />
       </div>
 
       {/* two-column polaroid wall; every photo reveals as it scrolls into view */}

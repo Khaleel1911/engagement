@@ -14,7 +14,7 @@ export default function Story() {
         <Lotus className="w-full" />
       </Parallax>
 
-      <SectionTitle kicker="How it all began" hindi="हमर कहानी" title="Our Story" />
+      <SectionTitle kicker="How it all began" title="Our Story" />
       <div ref={ref} className="relative mx-auto max-w-md pl-10">
         {/* the sacred thread (mauli) */}
         <div className="absolute top-0 bottom-0 left-[15px] w-[3px] rounded-full bg-blush-200" />

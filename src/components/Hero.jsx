@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { Ganesh, Mandala, Toran, Lotus, Sprig, GodnaBand } from './Ornaments'
+import { Ganesh, Mandala, Toran, Lotus, Sprig, BandhaniBand } from './Ornaments'
 import { showerPetals } from './Petals'
 import { Parallax, ease } from './ui'
 import { config } from '../config'
@@ -37,15 +37,15 @@ export default function Hero({ ready }) {
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 pt-28 pb-10">
         {/* ── mid layer: Ganesh ji ── */}
         <Parallax speed={-0.15}>
-          <motion.p {...show(0.1)} className="font-deva text-[15px] text-blush-500">
-            ॥ श्री गणेशाय नमः ॥
+          <motion.p {...show(0.1)} className="font-display text-[11px] tracking-[0.3em] text-blush-500 uppercase">
+            Shri Ganeshaya Namah
           </motion.p>
           <motion.button {...show(0.2)} onClick={bless} aria-label="Tap Ganesh ji for blessings" whileTap={{ scale: 0.95 }} className="relative mx-auto mt-3 block">
             <Ganesh className="float relative h-[196px] w-[172px]" />
           </motion.button>
-          <motion.p {...show(0.35)} className="mt-3 max-w-xs font-deva text-[14px] leading-relaxed text-cocoa-700">
-            वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br />
-            निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+          <motion.p {...show(0.35)} className="mt-3 max-w-xs font-serif text-[15px] leading-relaxed text-cocoa-700 italic">
+            O Lord Ganesha, radiant as a million suns,<br />
+            remove every obstacle from our path, always.
           </motion.p>
         </Parallax>
 
@@ -68,7 +68,6 @@ export default function Hero({ ready }) {
             <span className="h-px w-10 bg-gold-400/70" />
             <div>
               <p className="font-display text-sm tracking-[0.18em] text-cocoa-800">{config.displayDate}</p>
-              <p className="mt-1 font-deva text-sm text-blush-500">{config.displayDateHindi}</p>
             </div>
             <span className="h-px w-10 bg-gold-400/70" />
           </motion.div>
@@ -95,7 +94,7 @@ export default function Hero({ ready }) {
         Scroll
         <span className="h-8 w-px bg-gradient-to-b from-gold-400 to-transparent" />
       </motion.a>
-      <GodnaBand className="relative z-10" />
+      <BandhaniBand className="relative z-10" />
     </div>
   )
 }

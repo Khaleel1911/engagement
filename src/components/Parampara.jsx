@@ -3,39 +3,35 @@ import { EventIcon, Lotus } from './Ornaments'
 
 const rituals = [
   {
-    hindi: 'फलदान',
-    title: 'Phaldan',
+    title: 'Gol Dhana',
     icon: 'kalash',
-    text: 'The groom’s family arrives with coconut, fruits, sweets and a saree. An offering of respect that says “we welcome your daughter as our own.”',
+    text: 'Jaggery and coriander seeds are shared between both families, a sweet Gujarati custom that says “from today, we are one.”',
   },
   {
-    hindi: 'तिलक',
-    title: 'Tilak',
+    title: 'Chandlo',
     icon: 'tilak',
-    text: 'A tilak of kumkum and akshat on the forehead, with the blessings of the elders. The bond between families is sealed.',
+    text: 'A chandlo of kumkum and akshat on the forehead, with the blessings of the elders. The bond between families is sealed.',
   },
   {
-    hindi: 'अंगूठी रस्म',
-    title: 'Anguthi',
+    title: 'Vinti Vidhi',
     icon: 'rings',
     text: 'Before Ganesh ji, the couple exchange rings. It is a quiet promise that everything to come will be shared.',
   },
   {
-    hindi: 'आसीरवाद',
-    title: 'Aashirwad',
+    title: 'Aashirvad',
     icon: 'lotus',
-    text: 'Elders shower akshat and flowers on the couple. In Chhattisgarh, the blessing of the sian (elders) is everything.',
+    text: 'Elders shower akshat and flowers on the couple. In every Gujarati home, the blessing of the vadil (elders) is everything.',
   },
 ]
 
 const heritage = [
-  { k: 'Kosa Silk', v: 'The golden tussar silk of Champa and Janjgir, woven for every auspicious day.' },
-  { k: 'Godna', v: 'Ancient tattoo motifs of dots and lines, worn as jewellery that is never taken off.' },
-  { k: 'Dhokra', v: 'Bastar’s lost-wax brass art, as old as the Indus Valley and as warm as home.' },
-  { k: 'Jai Johar', v: 'The Chhattisgarhi greeting, full of respect, affection and togetherness.' },
+  { k: 'Patola', v: 'The double-ikat silk of Patan, woven thread by thread over months and treasured for generations.' },
+  { k: 'Bandhani', v: 'Tie-dye dots of Kutch and Jamnagar, the colours of every Gujarati celebration.' },
+  { k: 'Garba', v: 'Circles of dance around the lamp-lit garbo, clapping and twirling until the night runs out.' },
+  { k: 'Jai Shri Krishna', v: 'The everyday Gujarati greeting, said with folded hands and a warm smile.' },
 ]
 
-const words = ['जय जोहार', 'सगाई', 'शुभ मंगल', 'फलदान', 'आसीरवाद', 'सुघ्घर जोड़ी', 'मया', 'गणपति बप्पा मोरया']
+const words = ['Sagai', 'Blessings', 'Gol Dhana', 'Two Hearts', 'One Family', 'Togetherness', 'Forever', 'Love']
 
 export default function Parampara() {
   return (
@@ -45,7 +41,7 @@ export default function Parampara() {
       </Parallax>
 
       <div className="px-5">
-        <SectionTitle kicker="Chhattisgarhi traditions" hindi="हमर परंपरा" title="Rituals of the Day" />
+        <SectionTitle kicker="Gujarati traditions" title="Rituals of the Day" />
       </div>
 
       {/* stacked cards: each one slides in from alternating sides as you scroll */}
@@ -64,8 +60,7 @@ export default function Parampara() {
               <EventIcon name={r.icon} className="w-8" />
             </span>
             <div className="relative">
-              <p className="font-yatra text-2xl leading-tight text-blush-400">{r.hindi}</p>
-              <h3 className="font-display text-xs tracking-[0.25em] text-gold-500 uppercase">{r.title}</h3>
+              <h3 className="font-display text-lg leading-tight font-semibold text-blush-500">{r.title}</h3>
               <p className="mt-2 font-serif text-[16px] leading-relaxed text-cocoa-800/85">{r.text}</p>
             </div>
           </InView>
@@ -76,7 +71,7 @@ export default function Parampara() {
         <div className="relative my-14 -rotate-2 overflow-hidden bg-gradient-to-r from-blush-400 via-blush-300 to-blush-400 py-3 shadow-[0_12px_30px_-12px_rgba(214,117,100,.7)]">
           <div className="marquee flex w-max gap-8 whitespace-nowrap">
             {[...words, ...words].map((w, i) => (
-              <span key={i} className="flex items-center gap-8 font-yatra text-xl text-ivory">
+              <span key={i} className="flex items-center gap-8 font-display text-lg tracking-[0.2em] text-ivory uppercase">
                 {w} <span className="text-sm text-gold-100">✦</span>
               </span>
             ))}
@@ -85,8 +80,8 @@ export default function Parampara() {
 
       <div className="mx-auto max-w-md px-5">
         <Reveal className="text-center">
-          <p className="font-display text-[11px] tracking-[0.35em] text-gold-500 uppercase">The soul of Chhattisgarh</p>
-          <p className="mt-2 font-deva text-lg text-cocoa-800">छत्तीसगढ़िया, सबले बढ़िया</p>
+          <p className="font-display text-[11px] tracking-[0.35em] text-gold-500 uppercase">The soul of Gujarat</p>
+          <p className="mt-2 font-script text-3xl text-blush-500">Colour, warmth &amp; togetherness</p>
         </Reveal>
         <div className="mt-8 grid grid-cols-2 gap-3">
           {heritage.map((h, i) => (

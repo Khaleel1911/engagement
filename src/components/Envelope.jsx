@@ -18,7 +18,7 @@ const dropTransition = { duration: 0.9, ease: [0.5, 0, 0.75, 0] }
 function Seal({ broken }) {
   return (
     <motion.div
-      className="absolute top-[52%] left-1/2 -mt-9 -ml-9 grid h-18 w-18 place-items-center"
+      className="absolute top-[52%] left-1/2 -mt-12 -ml-12 grid h-24 w-24 place-items-center"
       animate={broken ? { scale: [1, 1.18, 0], rotate: [0, -8, 20], opacity: [1, 1, 0] } : { scale: 1 }}
       transition={{ duration: 0.5, times: [0, 0.35, 1], ease: 'easeIn' }}
     >
@@ -34,12 +34,14 @@ function Seal({ broken }) {
           d="M36 3c5 0 7 3 11 4s8 0 11 4 1 7 3 11 6 6 6 11-4 7-5 11 1 8-3 11-7 1-11 3-6 6-11 6-7-4-11-5-8 1-11-3-1-7-3-11-6-6-6-11 4-7 5-11-1-8 3-11 7-1 11-3S31 3 36 3z"
           fill="url(#wax)"
         />
-        <circle cx="36" cy="36" r="22" fill="none" stroke="#f3c7b8" strokeOpacity=".55" strokeWidth="1.2" />
         <circle cx="36" cy="36" r="25" fill="none" stroke="#7d352d" strokeOpacity=".35" strokeWidth="1" />
       </svg>
-      <span className="relative font-display text-[19px] font-semibold tracking-tight text-gold-100 [text-shadow:0_1px_0_rgba(90,30,20,.6)]">
-        R<span className="text-[15px] text-blush-100">N</span>
-      </span>
+      <img
+        src={config.images.monogram}
+        alt="R N"
+        draggable={false}
+        className="relative h-[64%] w-[64%] rounded-full shadow-[inset_0_0_0_1px_rgba(0,0,0,.05),0_0_0_1.5px_#e9c08c] select-none"
+      />
     </motion.div>
   )
 }
@@ -184,7 +186,7 @@ export default function EnvelopeIntro({ onOpenStart, onDone }) {
               animate={opening ? { opacity: 0, y: -30 } : { opacity: 1, y: 0 }}
               transition={{ duration: opening ? 0.6 : 1, ease }}
             >
-              <p className="font-deva text-[15px] text-blush-500">॥ श्री गणेशाय नमः ॥</p>
+              <p className="font-display text-[11px] tracking-[0.3em] text-blush-500 uppercase">Shri Ganeshaya Namah</p>
               <Ganesh className="float mx-auto mt-2 h-32 w-28" />
               <p className="mt-3 font-display text-[10px] tracking-[0.45em] text-gold-500 uppercase">You have a special invitation</p>
             </motion.div>

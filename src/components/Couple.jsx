@@ -11,7 +11,7 @@ function Person({ p, role, tilt = 0 }) {
       <p className="mt-9 font-display text-[10px] tracking-[0.4em] text-gold-500 uppercase">{role}</p>
       <h3 className="mt-1 font-script text-6xl text-rose">{p.name}</h3>
       <p className="mt-1 font-display text-sm tracking-wider text-cocoa-700">{p.fullName}</p>
-      <p className="mt-3 font-deva text-sm text-blush-500">{p.relation}</p>
+      <p className="mt-3 font-display text-[10px] tracking-[0.3em] text-blush-500 uppercase">{p.relation}</p>
       <p className="font-serif text-base text-cocoa-700 italic">{p.parents}</p>
       <p className="mt-4 max-w-xs font-serif text-[17px] leading-relaxed text-cocoa-800/80">{p.about}</p>
     </Reveal>
@@ -28,7 +28,7 @@ export default function Couple() {
         <Sprig className="w-full" />
       </Parallax>
 
-      <SectionTitle kicker="Two hearts · One promise" hindi="सुघ्घर जोड़ी" title="The Couple" />
+      <SectionTitle kicker="Two hearts · One promise" title="The Couple" />
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-10 md:flex-row md:items-start md:justify-center">
         <Person p={config.groom} role="The Groom" tilt={-2} />
 

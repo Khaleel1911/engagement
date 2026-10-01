@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import { SectionTitle, Reveal, Parallax, useScrollInView } from './ui'
-import { GodnaBand, Lotus } from './Ornaments'
+import { BandhaniBand, Lotus } from './Ornaments'
 import { mapsLink } from './Events'
 import { config } from '../config'
 
@@ -37,24 +37,17 @@ function Temple({ x, y }) {
   )
 }
 
-function Label({ x, y, en, hi, anchor = 'middle' }) {
+function Label({ x, y, en, anchor = 'middle' }) {
   return (
-    <g>
-      {hi && (
-        <text x={x} y={y} textAnchor={anchor} fontFamily="'Tiro Devanagari Hindi', serif" fontSize="8.5" fill="#c05f50">
-          {hi}
-        </text>
-      )}
-      <text x={x} y={y + (hi ? 9 : 0)} textAnchor={anchor} fontFamily="Cinzel, serif" fontSize="6" letterSpacing="1.2" fill="#8f6634">
-        {en.toUpperCase()}
-      </text>
-    </g>
+    <text x={x} y={y} textAnchor={anchor} fontFamily="Cinzel, serif" fontSize="6" letterSpacing="1.2" fill="#8f6634">
+      {en.toUpperCase()}
+    </text>
   )
 }
 
 function IllustratedMap({ drawn }) {
   const v = config.venue
-  const labels = { start: 'City Centre', landmark: 'Mandir', pond: 'Talab', river: 'Nadi', station: 'Station', ...v.mapLabels }
+  const labels = { start: 'City Centre', landmark: 'Mandir', pond: 'Talav', river: 'Narmada', station: 'Station', ...v.mapLabels }
   const [travelling, setTravelling] = useState(false)
   useEffect(() => {
     if (!drawn) return
@@ -95,14 +88,14 @@ function IllustratedMap({ drawn }) {
       <path d="M210 190 C250 180 300 195 340 185 V260 C300 270 250 255 220 262 C200 240 200 210 210 190Z" fill="#e1e5d2" opacity=".6" />
       <path d="M150 0 C170 30 230 20 250 0Z" fill="#f2cabd" opacity=".35" />
 
-      {/* river (Nadi) */}
+      {/* river (Narmada) */}
       <path d="M-10 70 C40 60 70 95 110 92 S170 60 205 72 S270 130 350 118" fill="none" stroke="#d7e4df" strokeWidth="18" strokeLinecap="round" />
       <path d="M-10 70 C40 60 70 95 110 92 S170 60 205 72 S270 130 350 118" fill="none" stroke="#e8f0ed" strokeWidth="9" strokeLinecap="round" />
       {[[40, 70], [150, 76], [300, 116]].map(([x, y]) => (
         <path key={x} d={`M${x - 6} ${y} q3 -3 6 0 t6 0`} fill="none" stroke="#a9c3bb" strokeWidth=".9" />
       ))}
 
-      {/* lotus pond (Talab) */}
+      {/* lotus pond (Talav) */}
       <ellipse cx="236" cy="226" rx="30" ry="15" fill="#d7e4df" stroke="#a9c3bb" strokeWidth=".8" />
       {[[226, 222], [246, 230], [238, 219]].map(([x, y], i) => (
         <g key={i} transform={`translate(${x} ${y})`}>
@@ -192,9 +185,9 @@ function IllustratedMap({ drawn }) {
         <path d="M252 42 L258 50 L262 44" fill="none" stroke="#d4a568" strokeWidth=".8" />
       </motion.g>
 
-      <Label x={82} y={158} en={labels.landmark} hi="मंदिर" />
-      <Label x={236} y={252} en={labels.pond} hi="तालाब" />
-      <Label x={30} y={56} en={labels.river} hi="नदी" anchor="start" />
+      <Label x={82} y={158} en={labels.landmark} />
+      <Label x={236} y={252} en={labels.pond} />
+      <Label x={30} y={56} en={labels.river} anchor="start" />
       <Label x={322} y={264} en={labels.station} anchor="end" />
 
       {/* compass rose */}
@@ -220,11 +213,11 @@ export default function Venue() {
 
   return (
     <div className="bg-paper relative flex flex-col justify-center px-5 pt-20 pb-24">
-      <GodnaBand className="absolute top-0 left-0" />
+      <BandhaniBand className="absolute top-0 left-0" />
       <Parallax speed={1} className="pointer-events-none absolute -right-8 bottom-16 w-32 opacity-80">
         <Lotus className="w-full" />
       </Parallax>
-      <SectionTitle kicker="Where hearts meet" hindi="स्थान" title="The Venue" />
+      <SectionTitle kicker="Where hearts meet" title="The Venue" />
 
       <Reveal className="mx-auto w-full max-w-md">
         <a
@@ -241,7 +234,7 @@ export default function Venue() {
             </div>
           </div>
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border border-gold-300 bg-ivory px-4 py-1 font-display text-[9px] tracking-[0.3em] text-gold-600 uppercase shadow-sm">
-            नक्शा · The Way
+            The Way
           </span>
           <span className="absolute right-4 bottom-4 rounded-full bg-cocoa-900/70 px-3 py-1.5 font-display text-[8px] tracking-[0.2em] text-ivory uppercase">
             Tap for directions
