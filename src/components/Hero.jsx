@@ -41,9 +41,13 @@ export default function Hero({ ready }) {
             Shri Ganeshaya Namah
           </motion.p>
           <motion.button {...show(0.2)} onClick={bless} aria-label="Tap Ganesh ji for blessings" whileTap={{ scale: 0.95 }} className="relative mx-auto mt-3 block">
-            <Ganesh className="float relative h-[196px] w-[172px]" />
+            <Ganesh className="float relative h-[min(40svh,330px)] w-[min(35svh,290px)]" />
           </motion.button>
-          <motion.p {...show(0.35)} className="mt-3 max-w-xs font-serif text-[15px] leading-relaxed text-cocoa-700 italic">
+          <motion.p {...show(0.3)} lang="sa" className="mx-auto mt-4 max-w-xs font-hindi text-[17px] leading-relaxed font-bold text-blush-500">
+            वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br />
+            निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+          </motion.p>
+          <motion.p {...show(0.35)} className="mx-auto mt-2 max-w-xs font-serif text-[15px] leading-relaxed text-cocoa-700 italic">
             O Lord Ganesha, radiant as a million suns,<br />
             remove every obstacle from our path, always.
           </motion.p>

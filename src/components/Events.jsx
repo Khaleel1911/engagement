@@ -3,11 +3,6 @@ import { SectionTitle, Reveal, Parallax } from './ui'
 import { EventIcon, Corner, BandhaniBand, Mandala } from './Ornaments'
 import { config } from '../config'
 
-const fmtTime = (t) => {
-  const [h, m] = t.split(':').map(Number)
-  const suffix = h >= 12 ? 'PM' : 'AM'
-  return `${((h + 11) % 12) + 1}:${String(m).padStart(2, '0')} ${suffix}`
-}
 const fmtDate = (d) =>
   new Date(`${d}T00:00:00`).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })
 
@@ -36,7 +31,7 @@ export default function Events() {
         <Mandala className="spin-slower h-full w-full opacity-25" stroke="#d67564" />
       </Parallax>
 
-      <SectionTitle kicker="Rituals & celebrations" title="The Ceremonies" />
+      <SectionTitle kicker="The day's celebrations" title="The Ceremonies" />
 
       <div className="relative mx-auto grid max-w-5xl gap-10 md:grid-cols-3">
         {config.events.map((e, i) => (
@@ -56,9 +51,7 @@ export default function Events() {
 
                 <div className="relative mt-4 inline-flex flex-col gap-0.5 rounded-full bg-blush-50 px-5 py-2 ring-1 ring-blush-200">
                   <span className="font-display text-xs tracking-widest text-cocoa-800">{fmtDate(e.date)}</span>
-                  <span className="font-display text-[11px] tracking-widest text-gold-500">
-                    {fmtTime(e.start)} – {fmtTime(e.end)}
-                  </span>
+                  <span className="font-display text-[11px] tracking-widest text-gold-500">{e.time}</span>
                 </div>
 
                 <p className="relative mt-4 font-serif text-[17px] leading-relaxed text-cocoa-700">{e.description}</p>

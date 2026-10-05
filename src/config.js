@@ -9,10 +9,13 @@ import rings from './assets/rings.webp'
 import ganesh from './assets/ganesh.webp'
 import groomPhoto from './assets/groom.webp'
 import bridePhoto from './assets/bride.webp'
-import couple1 from './assets/couple1.webp'
-import couple2 from './assets/couple2.webp'
 import kalash from './assets/kalash.webp'
 import monogram from './assets/monogram.webp'
+import groomFather from './assets/groomfather.webp'
+import groomMother from './assets/groommother.webp'
+import brideFather from './assets/bridefather.webp'
+import brideMother from './assets/bridemother.webp'
+import bgm from './assets/bgm.mp3'
 
 export const config = {
   groom: {
@@ -26,7 +29,7 @@ export const config = {
   },
   bride: {
     name: 'Neha',
-    fullName: 'Neha Chauhan',
+    fullName: 'Dr. Neha Chauhan',
     parents: 'Shri Yogendra Chauhan & Smt. Sunita Chauhan',
     relation: 'Daughter of',
     photo: bridePhoto,
@@ -35,35 +38,24 @@ export const config = {
   },
 
   // Main ceremony date/time, used by the countdown (local time, 24h)
-  mainDate: '2026-12-07T11:00:00',
+  mainDate: '2026-12-07T10:00:00',
   displayDate: 'Monday, 7th December 2026',
 
   hostFamily: 'The Chauhan Family',
   city: 'Bharuch, Gujarat',
 
-  images: { logo, monogram, rings, ganesh, kalash, couple1, couple2 },
-  music: '/music/shehnai.mp3', // optional background music
+  images: { logo, monogram, rings, ganesh, kalash },
+  music: bgm, // background music (src/assets/bgm.mp3), starts when the doors open
 
+  // `time` is what guests see; start/end (24h) are only used for the "Save the date" calendar entry
   events: [
     {
-      id: 'goldhana',
-      title: 'Chandlo & Gol Dhana',
+      id: 'sagai',
+      title: 'Sagai',
       date: '2026-12-07',
       start: '10:00',
-      end: '11:00',
-      icon: 'kalash',
-      description:
-        'The families meet over gol dhana, sweets and blessings. A chandlo of kumkum marks the beginning of a sacred bond.',
-      venue: 'Hotel Unity',
-      address: 'NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi, Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015',
-      mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015',
-    },
-    {
-      id: 'sagai',
-      title: 'Sagai: Ring Ceremony',
-      date: '2026-12-07',
-      start: '11:00',
-      end: '13:00',
+      end: '12:00',
+      time: '10:00 AM – 12:00 PM',
       icon: 'rings',
       description:
         'Before Ganesh ji and our elders, two hearts exchange rings and promises. The heart of the celebration.',
@@ -72,49 +64,68 @@ export const config = {
       mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015',
     },
     {
-      id: 'bhoj',
-      title: 'Bhojan & Raas Garba',
+      id: 'lunch',
+      title: 'Lunch',
       date: '2026-12-07',
-      start: '19:00',
-      end: '23:00',
+      start: '12:00',
+      end: '14:00',
+      time: '12:00 PM onwards',
+      icon: 'kalash',
+      description: 'Stay and share a grand Gujarati thali with both families, served with love and plenty of sweets.',
+      venue: 'Hotel Unity',
+      address: 'NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi, Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015',
+      mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015',
+    },
+    {
+      id: 'garba',
+      title: 'Raas Garba',
+      date: '2026-12-07',
+      start: '14:00',
+      end: '17:00',
+      time: 'After lunch',
       icon: 'diya',
-      description:
-        'An evening of a grand Gujarati thali, dhol, dandiya raas and garba. Come hungry, leave dancing.',
+      description: 'Dhol, dandiya raas and garba to round off the day. Come hungry, leave dancing.',
       venue: 'Hotel Unity',
       address: 'NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi, Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015',
       mapQuery: 'Hotel Unity, NH 48, Zadeshwar, Bharuch, Gujarat 392015',
     },
   ],
 
-  story: [
+  // "Our Families" page: parents' photos, names and both home addresses for each side
+  families: [
     {
-      year: '[Year]',
-      title: 'The First Hello',
-      text: 'It began with a simple hello and a conversation that somehow never really ended.',
+      side: "Groom's Side",
+      sideHindi: 'वर पक्ष',
+      father: {
+        title: 'सूरत जिला अध्यक्ष',
+        name: 'श्री विजय गोविंद सिंह चौहान',
+        org: 'राष्ट्रीय चौहान महासंघ',
+        photo: groomFather,
+        photoPosition: '50% 15%',
+      },
+      mother: { name: 'श्रीमती कुसुम चौहान', photo: groomMother, photoPosition: '50% 12%' },
+      // TODO: placeholders (the venue address) until the groom's real Surat and UP addresses arrive
+      addresses: [
+        { place: 'Surat', lines: ['NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi,', 'Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015'] },
+        { place: 'Uttar Pradesh', lines: ['NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi,', 'Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015'] },
+      ],
     },
     {
-      year: '[Year]',
-      title: 'Families Meet',
-      text: 'Chai, laughter and a little nervousness. Two families discovered they already felt like one.',
+      side: "Bride's Side",
+      sideHindi: 'वधू पक्ष',
+      father: {
+        title: 'राष्ट्रीय उपाध्यक्ष',
+        name: 'श्री योगेन्द्र शंकर चौहान',
+        org: 'राष्ट्रीय चौहान महासंघ',
+        photo: brideFather,
+        photoPosition: '50% 8%',
+      },
+      mother: { name: 'श्रीमती सुनीता चौहान', photo: brideMother, photoPosition: '50% 15%' },
+      addresses: [
+        { place: 'Bharuch', lines: ['91, Sharnam Vatika Society, opposite Novus Hotel,', 'NH-48, Vadadla, Bharuch, Gujarat'] },
+        { place: 'Uttar Pradesh', lines: ['Village Mishraulliya, Post Batulahi,', 'Tahsil Rudrapur, District Deoria, Uttar Pradesh'] },
+      ],
     },
-    {
-      year: '[Year]',
-      title: 'The Blessing',
-      text: 'With the aashirwad of our elders and Ganesh ji, a beautiful yes was spoken.',
-    },
-    {
-      year: '2026',
-      title: 'Sagai',
-      text: 'And now, we invite you to witness the first step of forever.',
-    },
-  ],
-
-  // Add more photos to src/assets and list them here
-  gallery: [
-    { src: couple1, caption: 'Two Souls' },
-    { src: couple2, caption: 'Together', position: '50% 30%' },
-    { src: groomPhoto, caption: 'Rahul', position: '50% 10%' },
-    { src: bridePhoto, caption: 'Neha' },
   ],
 
   venue: {
@@ -124,7 +135,7 @@ export const config = {
     notes: 'Ample parking available. On NH 48 at Zadeshwar Chowkdi, right beside the Swaminarayan Temple.',
     // Labels on the illustrated map (swap for real nearby places)
     mapLabels: { start: 'City Centre', landmark: 'Mandir', pond: 'Talav', river: 'Narmada', station: 'Station' },
-  },
+   },
 
   // Shown in the footer ("For any queries")
   rsvp: {

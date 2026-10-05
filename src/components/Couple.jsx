@@ -12,7 +12,7 @@ function Person({ p, role, tilt = 0 }) {
       <h3 className="mt-1 font-script text-6xl text-rose">{p.name}</h3>
       <p className="mt-1 font-display text-sm tracking-wider text-cocoa-700">{p.fullName}</p>
       <p className="mt-3 font-display text-[10px] tracking-[0.3em] text-blush-500 uppercase">{p.relation}</p>
-      <p className="font-serif text-base text-cocoa-700 italic">{p.parents}</p>
+      <p className="font-serif text-base font-bold text-cocoa-700 italic">{p.parents}</p>
       <p className="mt-4 max-w-xs font-serif text-[17px] leading-relaxed text-cocoa-800/80">{p.about}</p>
     </Reveal>
   )

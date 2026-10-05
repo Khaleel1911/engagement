@@ -130,7 +130,13 @@ export function useMusic() {
       a.play().catch(() => {})
     }
   }
-  return { playing, available, toggle }
+  const play = () => {
+    const a = audio.current
+    if (!a) return
+    a.userPaused(false)
+    a.play().catch(() => {})
+  }
+  return { playing, available, toggle, play }
 }
 
 export function MusicButton({ music, visible }) {
