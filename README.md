@@ -21,7 +21,7 @@ Your originals stay in `src/assets/`; the site uses optimised WebP copies:
 |---|---|
 | `ganesh.webp` | Ganesh ji (from `ganesh.jpg`, checkerboard removed): hero, card, footer |
 | `logo.webp`, `rings.webp` | Transparent cut-outs of `logo.jpeg` / `rings.jpeg` |
-| `groom.webp`, `bride.webp` | Side-by-side portraits in *Made for Each Other*, and the frames in *The Couple*. Adjust the crop with `photoPosition` in `config.js` |
+| `groom2.webp`, `bride.webp` | Side-by-side portraits in *Made for Each Other*, and the frames in *The Couple*. Adjust the crop with `photoPosition` in `config.js` |
 | `groomfather.webp`, `groommother.webp`, `bridefather.webp`, `bridemother.webp` | Parents' portraits in *Our Families* (from the `.jpeg` originals). Adjust the crop with `photoPosition` in `families` |
 
 To change a photo: replace the file in `src/assets/` (or import a new one in `config.js`).
@@ -31,7 +31,7 @@ Background music. It starts when the guest opens the doors; replace the file (or
 `bgm` import in `config.js`) to use a different track.
 
 ### Contacts
-The footer's *For any queries* phone numbers come from `rsvp.contacts` in `config.js`.
+The footer's *For any queries* phone numbers come from `rsvp.contacts` in `config.js`. The *RSVP on WhatsApp* buttons use `rsvp.whatsapp` (the number) and `rsvp.messages` (the pre-filled text for each language).
 
 ### How the page works
 - **Doors intro**: two carved doors each cover half the screen. Guests tap *Open Invitation* (or the

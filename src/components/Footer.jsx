@@ -21,6 +21,25 @@ export default function Footer() {
         <p className="font-display text-xs tracking-[0.25em] text-cocoa-700">{config.displayDate}</p>
 
         <div className="mx-auto mt-10 max-w-xs space-y-3">
+          <p className="font-display text-[10px] tracking-[0.35em] text-gold-500 uppercase">RSVP on WhatsApp</p>
+          <div className="grid grid-cols-2 gap-3">
+            {config.rsvp.messages.map((m) => (
+              <a
+                key={m.label}
+                lang={m.lang}
+                // api.whatsapp.com rather than wa.me: the wa.me redirect garbles emojis in the pre-filled text
+                href={`https://api.whatsapp.com/send?phone=${config.rsvp.whatsapp.replace(/\D/g, '')}&text=${encodeURIComponent(m.text)}`}
+                target="_blank"
+                rel="noreferrer"
+                className={`block rounded-full bg-[#25d366] px-4 py-3 text-base font-semibold text-white shadow-[0_12px_24px_-12px_rgba(37,211,102,.9)] active:scale-95 ${m.lang === 'hi' ? 'font-hindi' : 'font-serif'}`}
+              >
+                {m.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mx-auto mt-8 max-w-xs space-y-3">
           <p className="font-display text-[10px] tracking-[0.35em] text-gold-500 uppercase">For any queries</p>
           {config.rsvp.contacts.map((c, i) => (
             <a key={i} href={`tel:${c.phone.replace(/\s/g, '')}`} className="block rounded-full border border-gold-300 bg-ivory/70 px-4 py-3 font-serif text-base text-cocoa-800 active:scale-95">

@@ -91,8 +91,8 @@ export default function DoorsIntro({ onOpenStart, onDone }) {
             transition={{ duration: 0.35 }}
           >
             <motion.div initial={{ opacity: 0, y: -14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease }}>
-              <p className="font-display text-[11px] tracking-[0.3em] text-gold-200 uppercase">Shri Ganeshaya Namah</p>
-              <p className="mt-2 font-display text-[10px] tracking-[0.45em] text-gold-300/80 uppercase">You have a special invitation</p>
+              <p className="font-display text-base font-semibold tracking-[0.25em] text-gold-100 uppercase [text-shadow:0_1px_4px_rgba(0,0,0,.55)]">Shri Ganeshaya Namah</p>
+              <p className="mt-2.5 font-display text-[13px] font-semibold tracking-[0.25em] text-gold-200 uppercase [text-shadow:0_1px_4px_rgba(0,0,0,.55)]">You have a special invitation</p>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 1, ease }}>
@@ -102,7 +102,7 @@ export default function DoorsIntro({ onOpenStart, onDone }) {
               <p className="text-foil mt-5 font-script text-5xl leading-none">
                 {config.groom.name} &amp; {config.bride.name}
               </p>
-              <p className="mt-3 font-display text-[10px] tracking-[0.35em] text-gold-200 uppercase">Sagai · {config.displayDate}</p>
+              <p className="mt-4 font-display text-[13px] font-semibold tracking-[0.2em] text-gold-100 uppercase [text-shadow:0_1px_4px_rgba(0,0,0,.55)]">Sagai · {config.displayDate}</p>
             </motion.div>
 
             <div className="flex flex-col items-center">

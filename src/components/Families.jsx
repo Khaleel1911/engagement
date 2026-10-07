@@ -35,8 +35,8 @@ function Side({ f, delay }) {
         <h3 className="font-display text-[11px] tracking-[0.4em] text-gold-500 uppercase">{f.side}</h3>
 
         <div className="mt-6 grid grid-cols-2 items-start gap-4">
-          <Portrait person={f.father} label="Father" />
           <Portrait person={f.mother} label="Mother" />
+          <Portrait person={f.father} label="Father" />
         </div>
 
         {/* father: post in the samaj first (largest), then his name, then the samaj */}
@@ -45,6 +45,11 @@ function Side({ f, delay }) {
           <p className="mt-1 text-xl leading-snug text-cocoa-800">{f.father.name}</p>
           <p className="mt-1 text-base text-gold-600">({f.father.org})</p>
         </div>
+        {f.father.phone && (
+          <a href={`tel:${f.father.phone.replace(/\s/g, '')}`} className="mt-3 inline-block rounded-full border border-gold-300 bg-gold-100/40 px-4 py-2 font-serif text-base text-blush-500 active:scale-95">
+            {f.father.phone}
+          </a>
+        )}
         <Divider className="my-4" />
         <p lang="hi" className="font-hindi text-xl font-bold text-cocoa-800">{f.mother.name}</p>
 

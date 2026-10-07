@@ -7,7 +7,7 @@
 import logo from './assets/logo.webp'
 import rings from './assets/rings.webp'
 import ganesh from './assets/ganesh.webp'
-import groomPhoto from './assets/groom.webp'
+import groomPhoto from './assets/groom2.webp'
 import bridePhoto from './assets/bride.webp'
 import kalash from './assets/kalash.webp'
 import monogram from './assets/monogram.webp'
@@ -24,7 +24,7 @@ export const config = {
     parents: 'Shri Vijay Singh Chauhan & Smt. Kusum Chauhan',
     relation: 'Son of',
     photo: groomPhoto,
-    photoPosition: '50% 8%', // which part of the photo to keep in the arch
+    photoPosition: '50% 20%', // which part of the photo to keep in the arch
     about: 'Calm, curious and endlessly kind. Believes every good day starts with coffee and ends with family.',
   },
   bride: {
@@ -102,12 +102,12 @@ export const config = {
         org: 'राष्ट्रीय चौहान महासंघ',
         photo: groomFather,
         photoPosition: '50% 15%',
+        phone: '+91 98790 63084',
       },
       mother: { name: 'श्रीमती कुसुम चौहान', photo: groomMother, photoPosition: '50% 12%' },
-      // TODO: placeholders (the venue address) until the groom's real Surat and UP addresses arrive
       addresses: [
-        { place: 'Surat', lines: ['NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi,', 'Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015'] },
-        { place: 'Uttar Pradesh', lines: ['NH 48, beside Swaminarayan Temple, Zadeshwar Chowkdi,', 'Meghdoot Twp, Zadeshwar, Bharuch, Gujarat 392015'] },
+        { place: 'Surat', lines: ['239-240, Aaradhana Green Land-2,', 'Kadodara, Surat, Gujarat 394327'] },
+        { place: 'Uttar Pradesh', lines: ['Village Mansadi, Post Brahmanpura,', 'Tahsil Maunath Bhanjan, District Mau, Uttar Pradesh 276129'] },
       ],
     },
     {
@@ -119,6 +119,7 @@ export const config = {
         org: 'राष्ट्रीय चौहान महासंघ',
         photo: brideFather,
         photoPosition: '50% 8%',
+        phone: '+91 98244 93626',
       },
       mother: { name: 'श्रीमती सुनीता चौहान', photo: brideMother, photoPosition: '50% 15%' },
       addresses: [
@@ -137,11 +138,16 @@ export const config = {
     mapLabels: { start: 'City Centre', landmark: 'Mandir', pond: 'Talav', river: 'Narmada', station: 'Station' },
    },
 
-  // Shown in the footer ("For any queries")
+  // Footer: the WhatsApp RSVP buttons (sent to the groom's father) and the "For any queries" numbers
   rsvp: {
+    whatsapp: '+91 98790 63084',
+    messages: [
+      { label: 'English', text: 'With heartfelt joy, we’re delighted to confirm that we’ll be joining you on your special day. ❤️✨' },
+      { label: 'हिंदी', lang: 'hi', text: 'हमें बहुत खुशी है कि हम आपके इस खास दिन का हिस्सा बनेंगे। ❤️\nहम समारोह में ज़रूर शामिल होंगे। ✨' },
+    ],
     contacts: [
-      { name: 'Rahul', phone: '+91 87329 66848' },
-      { name: 'Neha', phone: '+91 78749 50775' },
+      { name: "Groom's Father", phone: '+91 98790 63084' },
+      { name: "Bride's Father", phone: '+91 98244 93626' },
     ],
   },
 
