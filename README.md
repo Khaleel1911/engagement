@@ -31,7 +31,7 @@ Background music. It starts when the guest opens the doors; replace the file (or
 `bgm` import in `config.js`) to use a different track.
 
 ### Contacts
-The footer's *For any queries* phone numbers come from `rsvp.contacts` in `config.js`. The *RSVP on WhatsApp* buttons use `rsvp.whatsapp` (the number) and `rsvp.messages` (the pre-filled text for each language).
+The footer's *For any queries* phone numbers come from `rsvp.contacts` in `config.js`. The *RSVP on WhatsApp* buttons are shown once per contact, each sending to that contact's own number, with `rsvp.messages` as the pre-filled text for each language.
 
 ### How the page works
 - **Doors intro**: two carved doors each cover half the screen. Guests tap *Open Invitation* (or the

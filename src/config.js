@@ -55,7 +55,7 @@ export const config = {
       date: '2026-12-07',
       start: '10:00',
       end: '12:00',
-      time: '10:00 AM – 12:00 PM',
+      time: '09:30 AM – 12:00 PM',
       icon: 'rings',
       description:
         'Before Ganesh ji and our elders, two hearts exchange rings and promises. The heart of the celebration.',
@@ -138,9 +138,8 @@ export const config = {
     mapLabels: { start: 'City Centre', landmark: 'Mandir', pond: 'Talav', river: 'Narmada', station: 'Station' },
    },
 
-  // Footer: the WhatsApp RSVP buttons (sent to the groom's father) and the "For any queries" numbers
+  // Footer: each contact gets their own WhatsApp RSVP buttons (sent to their number) and a "For any queries" call button
   rsvp: {
-    whatsapp: '+91 98790 63084',
     messages: [
       { label: 'English', text: 'With heartfelt joy, we’re delighted to confirm that we’ll be joining you on your special day. ❤️✨' },
       { label: 'हिंदी', lang: 'hi', text: 'हमें बहुत खुशी है कि हम आपके इस खास दिन का हिस्सा बनेंगे। ❤️\nहम समारोह में ज़रूर शामिल होंगे। ✨' },
